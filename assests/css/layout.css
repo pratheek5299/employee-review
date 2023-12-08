@@ -1,0 +1,13 @@
+body {
+  margin: 0px;
+  background-image: linear-gradient(to bottom right, lightseagreen, white);
+  background-repeat: no-repeat;
+  height: 80vh;
+  padding-top: 100px;
+}
+
+body main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
