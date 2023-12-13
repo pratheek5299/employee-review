@@ -1,10 +1,6 @@
 const mongoose = require('mongoose');
 
 const userSchema = new mongoose.Schema({
-    name: {
-        type: String,
-        required: true
-    },
     email: {
         type: String,
         required: true,
@@ -14,7 +10,15 @@ const userSchema = new mongoose.Schema({
         type: String,
         required: true
     },
+    name: {
+        type: String,
+        required: true
+    },
     admin: {
+        type: Boolean,
+        default: false
+    },
+    permission: {
         type: Boolean,
         default: false
     }

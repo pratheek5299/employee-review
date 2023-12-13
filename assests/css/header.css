@@ -1,7 +1,7 @@
 header {
-  background-color: black;
-  color: lightseagreen;
-  height: 60px;
+  background-color: #ffffff2b;
+  color: white;
+  height: 6   0px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -12,7 +12,24 @@ header {
   right: 0px;
 }
 
-header h4 {
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  font-weight: 500;
+header h2 {
+  font-weight: 600;
+  color: white;
+  text-shadow: 2px 2px 3px black,4px 4px 3px black, 3px 3px 3px white;
+}
+
+header div {
+  margin-right: 5px;
+  width: 35%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header div a {
+  color: black;
+  text-decoration: none;
+  font-weight: 600;
+  text-shadow: 2px 2px 1px white;
+  margin-right: 10px;
 }

@@ -1,6 +1,11 @@
+<link rel="stylesheet" href="/css/list_of_employees.css">
 <div id="overall-employees-view">
+    <h1>Operations</h1>
+    <h4><a href="/employee/review-list">Employees List and Performance Review</a></h4>
+    <hr><br>
     <%if(locals.user.admin == true){%>
         <%- include('admin_view') -%>
     <%}%>
-    <p>This is normal view</p>
+    <%- include('normal_view'); %>
+    
 </div>

@@ -2,6 +2,9 @@ const User = require('../models/users');
 
 //render the sign up form page
 module.exports.signUp = function(req, res){
+    if(req.isAuthenticated()){
+        return res.redirect('/employee/main-view')
+    }
     return res.render('user_sign_up',{
         title: 'User Sign Up'
     });
@@ -9,7 +12,9 @@ module.exports.signUp = function(req, res){
 
 //render the sign in form page
 module.exports.signIn = function(req, res){
-    
+    if(req.isAuthenticated()){
+        return res.redirect('/employee/main-view')
+    }
     return res.render('user_sign_in',{
         title: 'User Sign In'
     })
@@ -39,4 +44,14 @@ module.exports.createSession = async function(req, res){
     }catch(err){
         console.log('Error in creating a session', err);
     }
+}
+
+//sign out functionality
+module.exports.destroySession = function(req, res, next){
+    req.logout(function(err){
+        if(err){
+            return next(err);
+        }
+        return res.redirect('/')
+    })
 }

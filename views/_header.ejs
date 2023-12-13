@@ -1,7 +1,23 @@
 <header>
-    <h4>Employee Review</h4>
+    <h2>Employee Review</h2>
     <div>
-        <a href="/users/sign-in">Sign In</a>
-        <a href="/users/sign-up">Sign Up</a>
+        <%if (locals.user) {%>
+            <a >User: <%= locals.user.name %></a>
+            <a style="border-left:2px solid black;height: 40px"></a>
+            <a>
+                User Access: 
+                <%if (user.admin == true){%>
+                    Admin
+                <%}else{%>
+                    Normal
+                <%}%>
+            </a>
+            <a style="border-left:2px solid black;height: 40px"></a>
+            <a href="/users/sign-out">Sign Out</a>
+        <%}else{%>
+            <a href="/users/sign-in">Sign In</a>
+            <a style="border-left:2px solid black;height: 40px"></a>    
+            <a href="/users/sign-up">Sign Up</a>
+        <%}%>
     </div>
 </header>

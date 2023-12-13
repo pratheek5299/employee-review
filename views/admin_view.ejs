@@ -1,3 +1,28 @@
 <div id="admin-view">
-    <p>This is admin page</p>
+    <details >
+        <summary><b>Add Employee</b></summary>
+        <br>
+        <form action="/employee/add-employee" method="POST" id="add-employee-form">
+            <label for="employee_name">Employee Name:</label><br><br>
+            <input type="text" name="employee_name" id="employee_name" placeholder="Enter the employee name" required><br><br>
+            <button type="submit">Add Employee</button>
+        </form>
+    </details>
+    <br><hr><br>
+    <details>
+        <summary><b>Assign Employees for Review</b></summary>
+        <br>
+        <form action="/employee/give-permission">
+            <label for="select-user"><i>Select user who is allowed to give employee feedback</i></label>
+            <br><br>
+            <select name="assign" id="select-user">
+                <%for (let user of all_users){%>
+                    <option value="<%= user._id%>"><%= user.name %></option>
+                <%}%>
+            </select>
+            <br><br>
+            <button type="submit">Submit</button>
+        </form>
+    </details>
+    <br><hr>
 </div>

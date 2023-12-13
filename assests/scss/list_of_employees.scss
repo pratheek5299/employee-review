@@ -1,0 +1,41 @@
+#overall-employees-view{
+    background-color: white;
+    padding: 10px;
+    z-index: 10;
+    width: 40%;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    border-radius: 10px;
+    // text-shadow: 1px 2px 2px gray,1px 2px 1px gray, 1px 1px 1px black;
+    h1{
+        text-shadow: 2px 2px 3px gray,4px 4px 3px white, 3px 3px 3px black;
+    }
+    h4{
+        a{
+            text-decoration: none;
+            transition: all 0.3s ease-in-out;
+            font-size: 20px;
+        }
+        a:hover{
+            color: red;
+            
+        }
+    }
+    #add-employee-form{
+        margin-left: 20px;
+        font-size: small;
+        details{
+            padding-left: 10px;
+        }
+    }   
+    margin-bottom: 100px;
+    button{
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+        border: 0px;
+        background-color: gray;
+        color: white;
+        width: fit-content;
+        height: 20px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+}

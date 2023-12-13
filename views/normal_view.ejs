@@ -1,0 +1,25 @@
+<div id="normal-view">
+    <br>
+    <details>
+        <summary><b>Give Feedback</b></summary>
+        <%if (locals.user.permission){%>
+            <ol>
+                <%for (let employee of all_employees){%>
+                    <li>
+                        <p>Employee Name: <b><%= employee.employee_name%></b></p>
+                        <form action="/employee/create-feedback" method="post">
+                            <input type="hidden" name="employee" value="<%= employee._id %>">
+                            <textarea name="content" id="feedback" cols="30" rows="5" placeholder="Enter Feedback"></textarea>
+                            <br>
+                            <button>Sumbit Feedback</button>
+                        </form>
+                    </li>
+                <%}%>
+            </ol>
+        <%}else{%>
+            <p>Sorry!! You do not have the required permission for giving Feedback</p>
+            <p><b>Please request Admin for the required permission</b></p>
+        <%}%>
+    </details>
+    <br>
+</div>
