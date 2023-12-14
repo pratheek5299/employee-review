@@ -1,6 +1,7 @@
 # employee-review
 Employee Review System
 
+start command npm start
 employee-review file system
 
 assets
