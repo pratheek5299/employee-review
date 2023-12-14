@@ -55,3 +55,26 @@ module.exports.destroySession = function(req, res, next){
         return res.redirect('/')
     })
 }
+
+//change user access
+module.exports.changeAccess = async function(req, res){
+    try{
+        let users = await User.find({});
+        return res.render('change_access', {
+            title: 'Change Access',
+            all_users: users
+        })
+    }catch(err){
+        console.log('Error in changeAccess in users_controller. Error:==>', err);
+    }
+}
+
+//give admin access
+module.exports.giveAdminAccess = async function(req, res){
+    try{
+        let user = await User.findByIdAndUpdate(req.body.user, {admin: true});
+        return res.redirect('back');
+    }catch(err){
+        console.log('Error in giveAdminAccess in users_controller. Error:==>', err);
+    }
+}

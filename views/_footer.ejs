@@ -1,8 +1,10 @@
 <footer>
     <h4>Employee Review | Done By Pratheek</h4>
-    <%if(locals.user.admin == true){%>
-        <a href="">
-            Change User Permissions
-        </a>
+    <%if (locals.user){ %>
+        <%if(locals.user.admin == true){%>
+            <a href="/users/change-access">
+                Change User Access
+            </a>
+        <%}%>
     <%}%>
 </footer>

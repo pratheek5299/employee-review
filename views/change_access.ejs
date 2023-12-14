@@ -1,0 +1,19 @@
+<link rel="stylesheet" href="/css/change_access.css">
+<div id="change-access">
+    <h3>Change User access</h3>
+    <h4>Give admin access</h4>
+    <ol>
+        <%for (let user of all_users) {%>
+            <%if(user.name != 'Admin' && user.admin != true) {%>
+                <li>
+                    <p><b>User: <%= user.name %></b></p>
+                    <form action="/users/admin-access" method="POST">
+                        <input type="hidden" name="user" value="<%= user._id%>">
+                        <button type="sumbit">Change Access</button>
+                    </form>
+                </li>
+            <%}%>                
+        <%}%>
+    </ol>
+    <br>
+</div>

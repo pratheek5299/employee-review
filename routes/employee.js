@@ -7,4 +7,5 @@ router.get('/main-view',passport.checkAuthentication, employeeController.mainVie
 router.post('/add-employee', passport.checkAuthentication, employeeController.addEmployee);
 router.post('/create-feedback',passport.checkAuthentication, employeeController.addFeedback);
 router.get('/review-list', passport.checkAuthentication, employeeController.showList);
+router.post('/give-permission', passport.checkAuthentication, employeeController.givePermission);
 module.exports = router;

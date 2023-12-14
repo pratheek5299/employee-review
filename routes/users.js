@@ -12,4 +12,6 @@ router.post('/create-session', passport.authenticate(
     {failureRedirect: '/users/sign-in'}
 ), userController.createSession);
 router.get('/sign-out', userController.destroySession);
+router.get('/change-access',passport.checkAuthentication, userController.changeAccess);
+router.post('/admin-access', passport.checkAuthentication, userController.giveAdminAccess);
 module.exports = router;

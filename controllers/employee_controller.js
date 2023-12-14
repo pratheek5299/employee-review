@@ -80,3 +80,14 @@ module.exports.showList = async function(req, res){
         console.log('Error while fetching the data from the database', err);
     }
 }
+
+//give permission to give feedback
+module.exports.givePermission = async function(req, res){
+    try{
+        let user = await User.findByIdAndUpdate(req.body.assign, {permission: true});
+        return res.redirect('back');
+    }catch(err){
+        console.log('Error while giving permission to the user to give feedback');
+        console.log('Check employee_controller.ejs====>', err);
+    }
+}
